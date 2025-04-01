@@ -1,4 +1,59 @@
-# Astro Starter Kit: Basics
+# Portfolio Photographe
+
+Un portfolio élégant et moderne pour photographe, construit avec Astro et Tailwind CSS.
+
+## Caractéristiques
+
+- Design sombre et élégant
+- Galerie photo responsive
+- Page de contact avec formulaire
+- Navigation fluide
+- Optimisé pour les performances
+
+## Installation
+
+1. Clonez le repository :
+```bash
+git clone [url-du-repo]
+cd portfolio-clement
+```
+
+2. Installez les dépendances :
+```bash
+npm install
+```
+
+3. Ajoutez vos photos dans le dossier `public/gallery/`
+
+4. Lancez le serveur de développement :
+```bash
+npm run dev
+```
+
+5. Ouvrez [http://localhost:4321](http://localhost:4321) dans votre navigateur
+
+## Personnalisation
+
+### Images
+- Placez vos images dans le dossier `public/gallery/`
+- Mettez à jour le tableau `photos` dans `src/pages/galerie.astro` avec vos images
+- Ajoutez une image hero dans `public/hero-image.jpg`
+- Ajoutez des images pour la section "À propos" dans `public/about-1.jpg` et `public/about-2.jpg`
+
+### Couleurs
+Les couleurs peuvent être personnalisées dans `tailwind.config.mjs`
+
+### Texte
+Modifiez les textes dans les fichiers correspondants :
+- `src/pages/index.astro` pour la page d'accueil
+- `src/pages/galerie.astro` pour la galerie
+- `src/pages/contact.astro` pour la page de contact
+
+## Technologies utilisées
+
+- [Astro](https://astro.build)
+- [Tailwind CSS](https://tailwindcss.com)
+- [TypeScript](https://www.typescriptlang.org)
 
 ```sh
 npm create astro@latest -- --template basics

@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const photos = [
+  {
+    src: '/gallery/img1.jpg',
+    alt: 'Photo 1',
+    category: 'Street'
+  },
+  {
+    src: '/gallery/img2.jpg',
+    alt: 'Photo 2',
+    category: 'Portrait'
+  },
+  {
+    src: '/gallery/img3.jpg',
+    alt: 'Photo 3',
+    category: 'Sport'
+  },
+  {
+    src: '/gallery/img4.jpg',
+    alt: 'Photo 4',
+    category: 'Portrait'
+  },
+  {
+    src: '/gallery/img5.jpg',
+    alt: 'Photo 5',
+    category: 'Événement'
+  },
+  {
+    src: '/gallery/img6.jpg',
+    alt: 'Photo 6',
+    category: 'Street'
+  },
+  {
+    src: '/gallery/img7.jpg',
+    alt: 'Photo 7',
+    category: 'Animaux'
+  },
+  {
+    src: '/gallery/img8.jpg',
+    alt: 'Photo 8',
+    category: 'Street'
+  }
+];
+---
+
+<Layout title="Galerie - PhotoPortfolio">
+  <div class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-4xl font-bold text-center mb-12">Galerie</h1>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {photos.map((photo) => (
+          <div class="group relative overflow-hidden rounded-lg">
+            <img
+              src={photo.src}
+              alt={photo.alt}
+              class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div class="text-center">
+                <p class="text-white text-lg font-semibold">{photo.category}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</Layout> 
