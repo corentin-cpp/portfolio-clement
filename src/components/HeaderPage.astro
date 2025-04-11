@@ -1,0 +1,21 @@
+---
+    const { title } = Astro.props;
+    const { description } = Astro.props;
+---
+
+<div class="relative h-[60vh] w-full">
+    <div class="absolute inset-0">
+        <img
+            src="/banner.jpg"
+            alt="Bannière"
+            class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+    <div class="relative h-full flex flex-col items-center justify-center text-center px-4 pt-16">
+        <h1 class="text-5xl md:text-7xl font-bold mb-4">{title}</h1>
+        <p class="text-xl md:text-2xl text-gray-light max-w-2xl">
+            {description}
+        </p>
+    </div>
+</div>
